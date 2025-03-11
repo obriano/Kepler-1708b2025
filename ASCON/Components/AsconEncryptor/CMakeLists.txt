@@ -17,7 +17,8 @@ set(SOURCE_FILES
 
 # In /home/aaron/fprime/ASCON/Components/AsconEncryptor/CMakeLists.txt
 add_subdirectory(
-    "/home/aaron/fprime/ASCON/lib/ASCON" 
+    "${CMAKE_CURRENT_LIST_DIR}/../../lib/ASCON"
+
     "${CMAKE_CURRENT_BINARY_DIR}/ascon_lib"
 )
 

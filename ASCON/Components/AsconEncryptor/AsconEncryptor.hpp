@@ -33,6 +33,13 @@ namespace Components {
           const Fw::CmdStringArg& data
       ) override;
 
+      void Benchmark_cmdHandler(
+        FwOpcodeType opCode,
+        U32 cmdSeq,
+        U32 length,
+        U32 runs
+    );  // New benchmark handler
+
       // ----------------------------------------------------------------------
       // Utility Methods
       // ----------------------------------------------------------------------

@@ -344,4 +344,78 @@ namespace Components {
       this->cmdResponse_out(opCode, cmdSeq, Fw::CmdResponse::OK);
   }
 
+  void AsconEncryptor::Benchmark_cmdHandler(
+    FwOpcodeType opCode,
+    U32 cmdSeq,
+    U32 length,
+    U32 runs
+) {
+    FILE* logFile = fopen("benchmark.csv", "a");
+    if (!logFile) {
+        this->log_ACTIVITY_HI_DebugLog(Fw::LogStringArg("Failed to open benchmark.csv"));
+        this->cmdResponse_out(opCode, cmdSeq, Fw::CmdResponse::EXECUTION_ERROR);
+        return;
+    }
+    fseek(logFile, 0, SEEK_END);
+    if (ftell(logFile) == 0) {
+        fprintf(logFile, "Length,EncryptTimeUs,DecryptTimeUs\n");
+    }
+
+    std::vector<uint8_t> plaintext(length, 'A');
+    std::vector<unsigned char> ciphertext(length + CRYPTO_ABYTES);
+    std::vector<unsigned char> decrypted(length);
+
+    for (U32 i = 0; i < runs; i++) {
+        Fw::Time encStart = this->getTime();
+        unsigned long long cLen = 0;
+        int encRet = crypto_aead_encrypt(
+            ciphertext.data(), &cLen,
+            plaintext.data(), length,
+            nullptr, 0,
+            nullptr,
+            NONCE,
+            KEY
+        );
+        Fw::Time encEnd = this->getTime();
+
+        if (encRet != 0) {
+            this->log_ACTIVITY_HI_DebugLog(Fw::LogStringArg("Benchmark: Encrypt failed"));
+            fclose(logFile);
+            this->cmdResponse_out(opCode, cmdSeq, Fw::CmdResponse::EXECUTION_ERROR);
+            return;
+        }
+
+        U32 encTimeUs = (encEnd.getSeconds() * 1000000 + encEnd.getUSeconds()) -
+                       (encStart.getSeconds() * 1000000 + encStart.getUSeconds());
+
+        Fw::Time decStart = this->getTime();
+        unsigned long long pLen = 0;
+        int decRet = crypto_aead_decrypt(
+            decrypted.data(), &pLen,
+            nullptr,
+            ciphertext.data(), cLen,
+            nullptr, 0,
+            NONCE,
+            KEY
+        );
+        Fw::Time decEnd = this->getTime();
+
+        if (decRet != 0) {
+            this->log_ACTIVITY_HI_DebugLog(Fw::LogStringArg("Benchmark: Decrypt failed"));
+            fclose(logFile);
+            this->cmdResponse_out(opCode, cmdSeq, Fw::CmdResponse::EXECUTION_ERROR);
+            return;
+        }
+
+        U32 decTimeUs = (decEnd.getSeconds() * 1000000 + decEnd.getUSeconds()) -
+                       (decStart.getSeconds() * 1000000 + decStart.getUSeconds());
+
+        fprintf(logFile, "%u,%u,%u\n", length, encTimeUs, decTimeUs);
+    }
+
+    fclose(logFile);
+    this->log_ACTIVITY_HI_DebugLog(Fw::LogStringArg("Benchmark completed"));
+    this->cmdResponse_out(opCode, cmdSeq, Fw::CmdResponse::OK);
+}
+  
 } // namespace Components

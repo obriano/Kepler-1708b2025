@@ -16,6 +16,13 @@ module Components {
         data: string size 1024 @< Ciphertext to decrypt 
     ) opcode 0x101
 
+    @ Benchmark encryption/decryption for a given length and number of runs
+    async command Benchmark(
+        length: U32 @< Message length in bytes
+        runs: U32 @< Number of benchmark runs
+    ) opcode 0x102
+
+
     @ Tracks how many times we've encrypted
     telemetry EncryptionCount: U32
 
