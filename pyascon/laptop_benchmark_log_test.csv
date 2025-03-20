@@ -1,0 +1,717 @@
+Timestamp,Metric,Value
+07:31.6,Key Exchange Time,18.756785
+07:35.8,Decryption Time,0.028348
+07:35.8,Frame Processing Time,4.09808
+07:36.4,Decryption Time,0.049257
+07:36.4,Frame Processing Time,0.602049
+07:37.0,Decryption Time,0.046429
+07:37.0,Frame Processing Time,0.505474
+07:37.0,FPS,0.56
+07:37.5,Decryption Time,0.042309
+07:37.5,Frame Processing Time,0.538097
+07:38.2,Decryption Time,0.051864
+07:38.2,Frame Processing Time,0.663402
+07:38.7,Decryption Time,0.048315
+07:38.7,Frame Processing Time,0.503875
+07:39.2,Decryption Time,0.036628
+07:39.2,Frame Processing Time,0.536003
+07:39.7,Decryption Time,0.040028
+07:39.7,Frame Processing Time,0.427785
+07:40.1,Decryption Time,0.038331
+07:40.1,Frame Processing Time,0.395907
+07:40.5,Decryption Time,0.036316
+07:40.5,Frame Processing Time,0.407496
+07:40.9,Decryption Time,0.034772
+07:40.9,Frame Processing Time,0.39093
+07:41.3,Decryption Time,0.035113
+07:41.3,Frame Processing Time,0.413908
+07:41.8,Decryption Time,0.035649
+07:41.8,Frame Processing Time,0.400879
+07:42.2,Decryption Time,0.033245
+07:42.2,Frame Processing Time,0.381929
+07:42.2,FPS,2.12
+07:42.6,Decryption Time,0.037111
+07:42.6,Frame Processing Time,0.398093
+07:43.0,Decryption Time,0.033123
+07:43.0,Frame Processing Time,0.383611
+07:43.3,Decryption Time,0.032385
+07:43.3,Frame Processing Time,0.369753
+07:43.7,Decryption Time,0.03193
+07:43.7,Frame Processing Time,0.36742
+07:44.1,Decryption Time,0.03375
+07:44.1,Frame Processing Time,0.408539
+07:44.5,Decryption Time,0.035095
+07:44.5,Frame Processing Time,0.395506
+07:44.9,Decryption Time,0.034115
+07:44.9,Frame Processing Time,0.394995
+07:45.3,Decryption Time,0.033512
+07:45.3,Frame Processing Time,0.372128
+07:45.7,Decryption Time,0.0332
+07:45.7,Frame Processing Time,0.38279
+07:46.1,Decryption Time,0.033793
+07:46.1,Frame Processing Time,0.397082
+07:46.5,Decryption Time,0.034247
+07:46.5,Frame Processing Time,0.398792
+07:47.0,Decryption Time,0.036165
+07:47.0,Frame Processing Time,0.471656
+07:47.4,Decryption Time,0.035122
+07:47.4,Frame Processing Time,0.400808
+07:47.4,FPS,2.46
+07:47.8,Decryption Time,0.035996
+07:47.8,Frame Processing Time,0.388856
+07:48.2,Decryption Time,0.035379
+07:48.2,Frame Processing Time,0.404344
+07:48.7,Decryption Time,0.036788
+07:48.7,Frame Processing Time,0.416407
+07:49.1,Decryption Time,0.037462
+07:49.1,Frame Processing Time,0.405452
+07:49.5,Decryption Time,0.035034
+07:49.5,Frame Processing Time,0.433303
+07:49.9,Decryption Time,0.034771
+07:49.9,Frame Processing Time,0.406133
+07:50.4,Decryption Time,0.035419
+07:50.4,Frame Processing Time,0.394048
+07:50.8,Decryption Time,0.035488
+07:50.8,Frame Processing Time,0.393468
+07:51.2,Decryption Time,0.037007
+07:51.2,Frame Processing Time,0.409062
+07:51.6,Decryption Time,0.035559
+07:51.6,Frame Processing Time,0.383097
+07:52.0,Decryption Time,0.03758
+07:52.0,Frame Processing Time,0.39972
+07:52.4,Decryption Time,0.035285
+07:52.4,Frame Processing Time,0.404841
+07:52.8,Decryption Time,0.035967
+07:52.8,Frame Processing Time,0.416327
+07:52.8,FPS,2.41
+07:53.2,Decryption Time,0.035349
+07:53.2,Frame Processing Time,0.408329
+07:53.7,Decryption Time,0.036826
+07:53.7,Frame Processing Time,0.414554
+07:54.1,Decryption Time,0.048507
+07:54.1,Frame Processing Time,0.419603
+07:54.5,Decryption Time,0.048507
+07:54.5,Frame Processing Time,0.418875
+07:54.9,Decryption Time,0.037913
+07:54.9,Frame Processing Time,0.394357
+07:55.3,Decryption Time,0.036096
+07:55.3,Frame Processing Time,0.388325
+07:55.8,Decryption Time,0.036739
+07:55.8,Frame Processing Time,0.400033
+07:56.2,Decryption Time,0.036539
+07:56.2,Frame Processing Time,0.400009
+07:56.6,Decryption Time,0.035656
+07:56.6,Frame Processing Time,0.389548
+07:57.0,Decryption Time,0.039334
+07:57.0,Frame Processing Time,0.414325
+07:57.4,Decryption Time,0.037213
+07:57.4,Frame Processing Time,0.413489
+07:57.8,Decryption Time,0.03563
+07:57.8,Frame Processing Time,0.400634
+07:57.8,FPS,2.39
+07:58.3,Decryption Time,0.036117
+07:58.3,Frame Processing Time,0.40805
+07:58.7,Decryption Time,0.037621
+07:58.7,Frame Processing Time,0.418419
+07:59.1,Decryption Time,0.034914
+07:59.1,Frame Processing Time,0.383823
+07:59.5,Decryption Time,0.037489
+07:59.5,Frame Processing Time,0.43877
+07:59.9,Decryption Time,0.035081
+07:59.9,Frame Processing Time,0.379735
+08:00.3,Decryption Time,0.035948
+08:00.3,Frame Processing Time,0.409051
+08:00.7,Decryption Time,0.035582
+08:00.7,Frame Processing Time,0.385127
+08:01.2,Decryption Time,0.034927
+08:01.2,Frame Processing Time,0.399942
+08:01.6,Decryption Time,0.037432
+08:01.6,Frame Processing Time,0.415992
+08:02.0,Decryption Time,0.035834
+08:02.0,Frame Processing Time,0.390944
+08:02.4,Decryption Time,0.03605
+08:02.4,Frame Processing Time,0.398371
+08:02.8,Decryption Time,0.035824
+08:02.8,Frame Processing Time,0.389183
+08:03.2,Decryption Time,0.036439
+08:03.2,Frame Processing Time,0.388597
+08:03.2,FPS,2.42
+08:03.6,Decryption Time,0.036186
+08:03.6,Frame Processing Time,0.401257
+08:04.0,Decryption Time,0.037453
+08:04.0,Frame Processing Time,0.402361
+08:04.5,Decryption Time,0.037523
+08:04.5,Frame Processing Time,0.420664
+08:04.9,Decryption Time,0.035957
+08:04.9,Frame Processing Time,0.402053
+08:05.3,Decryption Time,0.035919
+08:05.3,Frame Processing Time,0.409973
+08:05.7,Decryption Time,0.037697
+08:05.7,Frame Processing Time,0.397677
+08:06.1,Decryption Time,0.036937
+08:06.1,Frame Processing Time,0.405928
+08:06.5,Decryption Time,0.036493
+08:06.5,Frame Processing Time,0.391261
+08:06.9,Decryption Time,0.036569
+08:06.9,Frame Processing Time,0.40059
+08:07.3,Decryption Time,0.035823
+08:07.3,Frame Processing Time,0.390198
+08:07.7,Decryption Time,0.038106
+08:07.7,Frame Processing Time,0.399387
+08:08.1,Decryption Time,0.035234
+08:08.1,Frame Processing Time,0.363631
+08:08.5,Decryption Time,0.035256
+08:08.5,Frame Processing Time,0.379294
+08:08.5,FPS,2.45
+08:08.9,Decryption Time,0.034075
+08:08.9,Frame Processing Time,0.362353
+08:09.3,Decryption Time,0.040507
+08:09.3,Frame Processing Time,0.400035
+08:09.9,Decryption Time,0.049036
+08:09.9,Frame Processing Time,0.578876
+08:10.6,Decryption Time,0.056387
+08:10.6,Frame Processing Time,0.706759
+08:11.0,Decryption Time,0.03846
+08:11.0,Frame Processing Time,0.357106
+08:11.4,Decryption Time,0.038205
+08:11.4,Frame Processing Time,0.384166
+08:11.8,Decryption Time,0.043257
+08:11.8,Frame Processing Time,0.419011
+08:12.5,Decryption Time,0.039382
+08:12.5,Frame Processing Time,0.697128
+08:12.6,Decryption Time,0.036551
+08:12.6,Frame Processing Time,0.114655
+08:13.1,Decryption Time,0.039229
+08:13.1,Frame Processing Time,0.417342
+08:13.5,Decryption Time,0.037518
+08:13.5,Frame Processing Time,0.401585
+08:13.9,Decryption Time,0.037832
+08:13.9,Frame Processing Time,0.401276
+08:13.9,FPS,2.23
+08:14.3,Decryption Time,0.036895
+08:14.3,Frame Processing Time,0.39085
+08:14.7,Decryption Time,0.038679
+08:14.7,Frame Processing Time,0.406556
+08:15.1,Decryption Time,0.039155
+08:15.1,Frame Processing Time,0.398395
+08:15.5,Decryption Time,0.040035
+08:15.5,Frame Processing Time,0.412519
+08:15.9,Decryption Time,0.037893
+08:15.9,Frame Processing Time,0.384967
+08:16.4,Decryption Time,0.038935
+08:16.4,Frame Processing Time,0.418508
+08:16.8,Decryption Time,0.038898
+08:16.8,Frame Processing Time,0.401622
+08:17.2,Decryption Time,0.039144
+08:17.2,Frame Processing Time,0.405011
+08:17.6,Decryption Time,0.039077
+08:17.6,Frame Processing Time,0.401297
+08:18.0,Decryption Time,0.038827
+08:18.0,Frame Processing Time,0.417643
+08:18.4,Decryption Time,0.038481
+08:18.4,Frame Processing Time,0.381269
+08:18.8,Decryption Time,0.04285
+08:18.8,Frame Processing Time,0.402023
+08:19.2,Decryption Time,0.040358
+08:19.2,Frame Processing Time,0.412837
+08:19.3,FPS,2.42
+08:19.7,Decryption Time,0.039061
+08:19.7,Frame Processing Time,0.406164
+08:20.1,Decryption Time,0.037539
+08:20.1,Frame Processing Time,0.398296
+08:20.5,Decryption Time,0.037111
+08:20.5,Frame Processing Time,0.378891
+08:20.9,Decryption Time,0.039307
+08:20.9,Frame Processing Time,0.403285
+08:21.3,Decryption Time,0.037114
+08:21.3,Frame Processing Time,0.37133
+08:21.7,Decryption Time,0.037803
+08:21.7,Frame Processing Time,0.397036
+08:22.1,Decryption Time,0.039277
+08:22.1,Frame Processing Time,0.407021
+08:22.5,Decryption Time,0.038553
+08:22.5,Frame Processing Time,0.417773
+08:22.9,Decryption Time,0.038656
+08:22.9,Frame Processing Time,0.380433
+08:23.3,Decryption Time,0.039351
+08:23.3,Frame Processing Time,0.397804
+08:23.7,Decryption Time,0.038706
+08:23.7,Frame Processing Time,0.380818
+08:24.1,Decryption Time,0.03599
+08:24.1,Frame Processing Time,0.366069
+08:24.5,Decryption Time,0.035248
+08:24.5,Frame Processing Time,0.376644
+08:24.5,FPS,2.49
+08:24.9,Decryption Time,0.039604
+08:24.9,Frame Processing Time,0.369241
+08:25.3,Decryption Time,0.038496
+08:25.3,Frame Processing Time,0.384683
+08:25.6,Decryption Time,0.039466
+08:25.6,Frame Processing Time,0.380464
+08:26.1,Decryption Time,0.038833
+08:26.1,Frame Processing Time,0.396878
+08:26.4,Decryption Time,0.038894
+08:26.4,Frame Processing Time,0.382228
+08:26.9,Decryption Time,0.038708
+08:26.9,Frame Processing Time,0.391427
+08:27.2,Decryption Time,0.038534
+08:27.2,Frame Processing Time,0.382827
+08:27.7,Decryption Time,0.039977
+08:27.7,Frame Processing Time,0.401672
+08:28.1,Decryption Time,0.037445
+08:28.1,Frame Processing Time,0.395931
+08:28.4,Decryption Time,0.036155
+08:28.4,Frame Processing Time,0.352612
+08:28.8,Decryption Time,0.036502
+08:28.8,Frame Processing Time,0.356728
+08:29.2,Decryption Time,0.037256
+08:29.2,Frame Processing Time,0.374152
+08:29.6,Decryption Time,0.039071
+08:29.6,Frame Processing Time,0.410308
+08:29.6,FPS,2.54
+08:30.0,Decryption Time,0.039959
+08:30.0,Frame Processing Time,0.409207
+08:30.4,Decryption Time,0.04031
+08:30.4,Frame Processing Time,0.405385
+08:30.8,Decryption Time,0.039532
+08:30.8,Frame Processing Time,0.383157
+08:31.3,Decryption Time,0.039518
+08:31.3,Frame Processing Time,0.411138
+08:31.7,Decryption Time,0.039556
+08:31.7,Frame Processing Time,0.379754
+08:32.1,Decryption Time,0.039506
+08:32.1,Frame Processing Time,0.393475
+08:32.5,Decryption Time,0.041055
+08:32.5,Frame Processing Time,0.415764
+08:32.9,Decryption Time,0.039759
+08:32.9,Frame Processing Time,0.403027
+08:33.3,Decryption Time,0.040933
+08:33.3,Frame Processing Time,0.413698
+08:33.7,Decryption Time,0.039754
+08:33.7,Frame Processing Time,0.397331
+08:34.1,Decryption Time,0.03909
+08:34.1,Frame Processing Time,0.402153
+08:34.6,Decryption Time,0.038901
+08:34.6,Frame Processing Time,0.386054
+08:35.0,Decryption Time,0.039595
+08:35.0,Frame Processing Time,0.401174
+08:35.0,FPS,2.43
+08:35.4,Decryption Time,0.038937
+08:35.4,Frame Processing Time,0.386089
+08:35.8,Decryption Time,0.039003
+08:35.8,Frame Processing Time,0.388041
+08:36.2,Decryption Time,0.040002
+08:36.2,Frame Processing Time,0.457829
+08:36.6,Decryption Time,0.040124
+08:36.6,Frame Processing Time,0.391497
+08:37.0,Decryption Time,0.040122
+08:37.0,Frame Processing Time,0.412958
+08:37.5,Decryption Time,0.04046
+08:37.5,Frame Processing Time,0.397945
+08:37.9,Decryption Time,0.047939
+08:37.9,Frame Processing Time,0.40933
+08:38.3,Decryption Time,0.040365
+08:38.3,Frame Processing Time,0.395403
+08:38.7,Decryption Time,0.040658
+08:38.7,Frame Processing Time,0.411621
+08:39.1,Decryption Time,0.04267
+08:39.1,Frame Processing Time,0.404784
+08:39.6,Decryption Time,0.044678
+08:39.6,Frame Processing Time,0.429874
+08:40.0,Decryption Time,0.046983
+08:40.0,Frame Processing Time,0.386949
+08:40.0,FPS,2.39
+08:40.4,Decryption Time,0.049991
+08:40.4,Frame Processing Time,0.387043
+08:40.8,Decryption Time,0.048481
+08:40.8,Frame Processing Time,0.390528
+08:41.2,Decryption Time,0.057184
+08:41.2,Frame Processing Time,0.376604
+08:41.6,Decryption Time,0.04197
+08:41.6,Frame Processing Time,0.386631
+08:42.0,Decryption Time,0.041393
+08:42.0,Frame Processing Time,0.390713
+08:42.4,Decryption Time,0.044514
+08:42.4,Frame Processing Time,0.401638
+08:42.8,Decryption Time,0.045245
+08:42.8,Frame Processing Time,0.393366
+08:43.2,Decryption Time,0.042098
+08:43.2,Frame Processing Time,0.397549
+08:43.6,Decryption Time,0.053147
+08:43.6,Frame Processing Time,0.410398
+08:44.0,Decryption Time,0.054712
+08:44.0,Frame Processing Time,0.395846
+08:44.4,Decryption Time,0.043422
+08:44.4,Frame Processing Time,0.399466
+08:44.8,Decryption Time,0.041923
+08:44.8,Frame Processing Time,0.397366
+08:45.3,Decryption Time,0.056001
+08:45.3,Frame Processing Time,0.425762
+08:45.3,FPS,2.45
+08:45.7,Decryption Time,0.048906
+08:45.7,Frame Processing Time,0.385261
+08:46.1,Decryption Time,0.049757
+08:46.1,Frame Processing Time,0.387164
+08:46.5,Decryption Time,0.05002
+08:46.5,Frame Processing Time,0.392141
+08:46.9,Decryption Time,0.051635
+08:46.9,Frame Processing Time,0.396636
+08:47.3,Decryption Time,0.047583
+08:47.3,Frame Processing Time,0.404369
+08:47.7,Decryption Time,0.041054
+08:47.7,Frame Processing Time,0.361317
+08:48.1,Decryption Time,0.043501
+08:48.1,Frame Processing Time,0.394103
+08:48.5,Decryption Time,0.047344
+08:48.5,Frame Processing Time,0.399099
+08:48.9,Decryption Time,0.047688
+08:48.9,Frame Processing Time,0.416374
+08:49.4,Decryption Time,0.052329
+08:49.4,Frame Processing Time,0.421931
+08:49.8,Decryption Time,0.044061
+08:49.8,Frame Processing Time,0.413662
+08:50.2,Decryption Time,0.04109
+08:50.2,Frame Processing Time,0.397126
+08:50.6,Decryption Time,0.042128
+08:50.6,Frame Processing Time,0.415006
+08:50.6,FPS,2.43
+08:51.1,Decryption Time,0.043125
+08:51.1,Frame Processing Time,0.429364
+08:51.5,Decryption Time,0.044346
+08:51.5,Frame Processing Time,0.412668
+08:51.9,Decryption Time,0.044954
+08:51.9,Frame Processing Time,0.410166
+08:52.3,Decryption Time,0.043198
+08:52.3,Frame Processing Time,0.401289
+08:52.7,Decryption Time,0.045346
+08:52.7,Frame Processing Time,0.410097
+08:53.1,Decryption Time,0.041093
+08:53.1,Frame Processing Time,0.401405
+08:53.6,Decryption Time,0.041399
+08:53.6,Frame Processing Time,0.399584
+08:54.0,Decryption Time,0.051129
+08:54.0,Frame Processing Time,0.433886
+08:54.4,Decryption Time,0.053579
+08:54.4,Frame Processing Time,0.396992
+08:54.8,Decryption Time,0.043719
+08:54.8,Frame Processing Time,0.393499
+08:55.2,Decryption Time,0.056434
+08:55.2,Frame Processing Time,0.424387
+08:55.6,Decryption Time,0.050332
+08:55.6,Frame Processing Time,0.397769
+08:55.6,FPS,2.39
+08:56.1,Decryption Time,0.053084
+08:56.1,Frame Processing Time,0.409086
+08:56.5,Decryption Time,0.050149
+08:56.5,Frame Processing Time,0.419337
+08:56.9,Decryption Time,0.041169
+08:56.9,Frame Processing Time,0.39249
+08:57.3,Decryption Time,0.046484
+08:57.3,Frame Processing Time,0.418051
+08:57.8,Decryption Time,0.05134
+08:57.8,Frame Processing Time,0.4193
+08:58.2,Decryption Time,0.055781
+08:58.2,Frame Processing Time,0.424462
+08:58.6,Decryption Time,0.062053
+08:58.6,Frame Processing Time,0.417054
+08:59.0,Decryption Time,0.046628
+08:59.0,Frame Processing Time,0.384984
+08:59.5,Decryption Time,0.051385
+08:59.5,Frame Processing Time,0.415464
+08:59.9,Decryption Time,0.044915
+08:59.9,Frame Processing Time,0.415195
+09:00.3,Decryption Time,0.053862
+09:00.3,Frame Processing Time,0.424228
+09:00.7,Decryption Time,0.042078
+09:00.7,Frame Processing Time,0.414006
+09:00.7,FPS,2.36
+09:01.2,Decryption Time,0.044189
+09:01.2,Frame Processing Time,0.427701
+09:01.6,Decryption Time,0.044087
+09:01.6,Frame Processing Time,0.471324
+09:02.1,Decryption Time,0.042861
+09:02.1,Frame Processing Time,0.409843
+09:02.5,Decryption Time,0.045402
+09:02.5,Frame Processing Time,0.407257
+09:02.9,Decryption Time,0.041673
+09:02.9,Frame Processing Time,0.398241
+09:03.3,Decryption Time,0.043701
+09:03.3,Frame Processing Time,0.430408
+09:03.7,Decryption Time,0.041935
+09:03.7,Frame Processing Time,0.399073
+09:04.1,Decryption Time,0.044284
+09:04.2,Frame Processing Time,0.408076
+09:04.6,Decryption Time,0.050808
+09:04.6,Frame Processing Time,0.416436
+09:05.0,Decryption Time,0.044943
+09:05.0,Frame Processing Time,0.40168
+09:05.4,Decryption Time,0.049021
+09:05.4,Frame Processing Time,0.414365
+09:05.9,Decryption Time,0.049349
+09:05.9,Frame Processing Time,0.43704
+09:05.9,FPS,2.34
+09:06.3,Decryption Time,0.045294
+09:06.3,Frame Processing Time,0.407177
+09:06.7,Decryption Time,0.041694
+09:06.7,Frame Processing Time,0.404755
+09:07.1,Decryption Time,0.04002
+09:07.1,Frame Processing Time,0.402915
+09:07.5,Decryption Time,0.045009
+09:07.5,Frame Processing Time,0.393204
+09:07.9,Decryption Time,0.045678
+09:07.9,Frame Processing Time,0.394583
+09:08.3,Decryption Time,0.055635
+09:08.3,Frame Processing Time,0.397544
+09:08.7,Decryption Time,0.053649
+09:08.7,Frame Processing Time,0.394917
+09:09.2,Decryption Time,0.066549
+09:09.2,Frame Processing Time,0.423396
+09:09.6,Decryption Time,0.045815
+09:09.6,Frame Processing Time,0.380865
+09:10.0,Decryption Time,0.049073
+09:10.0,Frame Processing Time,0.38945
+09:10.3,Decryption Time,0.040423
+09:10.3,Frame Processing Time,0.355158
+09:10.8,Decryption Time,0.040711
+09:10.8,Frame Processing Time,0.403761
+09:11.2,Decryption Time,0.042364
+09:11.2,Frame Processing Time,0.392869
+09:11.2,FPS,2.46
+09:11.6,Decryption Time,0.04264
+09:11.6,Frame Processing Time,0.394069
+09:12.0,Decryption Time,0.041751
+09:12.0,Frame Processing Time,0.387201
+09:12.4,Decryption Time,0.039389
+09:12.4,Frame Processing Time,0.409068
+09:12.8,Decryption Time,0.049923
+09:12.8,Frame Processing Time,0.421936
+09:13.2,Decryption Time,0.041705
+09:13.2,Frame Processing Time,0.395193
+09:13.6,Decryption Time,0.039669
+09:13.6,Frame Processing Time,0.385879
+09:14.0,Decryption Time,0.040544
+09:14.0,Frame Processing Time,0.407347
+09:14.5,Decryption Time,0.036993
+09:14.5,Frame Processing Time,0.409081
+09:14.8,Decryption Time,0.039559
+09:14.8,Frame Processing Time,0.366373
+09:15.2,Decryption Time,0.042546
+09:15.2,Frame Processing Time,0.39524
+09:15.6,Decryption Time,0.041591
+09:15.6,Frame Processing Time,0.394716
+09:16.1,Decryption Time,0.048412
+09:16.1,Frame Processing Time,0.40248
+09:16.5,Decryption Time,0.043631
+09:16.5,Frame Processing Time,0.413089
+09:16.5,FPS,2.44
+09:17.0,Decryption Time,0.0458
+09:17.0,Frame Processing Time,0.478863
+09:17.4,Decryption Time,0.045944
+09:17.4,Frame Processing Time,0.416954
+09:17.8,Decryption Time,0.051744
+09:17.8,Frame Processing Time,0.426824
+09:18.3,Decryption Time,0.047744
+09:18.3,Frame Processing Time,0.420367
+09:18.7,Decryption Time,0.047645
+09:18.7,Frame Processing Time,0.439266
+09:19.2,Decryption Time,0.047884
+09:19.2,Frame Processing Time,0.479601
+09:19.7,Decryption Time,0.04258
+09:19.7,Frame Processing Time,0.431355
+09:20.1,Decryption Time,0.043799
+09:20.1,Frame Processing Time,0.422604
+09:20.5,Decryption Time,0.041832
+09:20.5,Frame Processing Time,0.411377
+09:21.0,Decryption Time,0.046644
+09:21.0,Frame Processing Time,0.438339
+09:21.4,Decryption Time,0.047627
+09:21.4,Frame Processing Time,0.41176
+09:21.8,Decryption Time,0.041315
+09:21.8,Frame Processing Time,0.400397
+09:21.8,FPS,2.25
+09:22.3,Decryption Time,0.042918
+09:22.3,Frame Processing Time,0.433526
+09:22.7,Decryption Time,0.042705
+09:22.7,Frame Processing Time,0.430696
+09:23.1,Decryption Time,0.042747
+09:23.1,Frame Processing Time,0.437431
+09:23.6,Decryption Time,0.044249
+09:23.6,Frame Processing Time,0.49165
+09:24.1,Decryption Time,0.052575
+09:24.1,Frame Processing Time,0.437868
+09:24.6,Decryption Time,0.045459
+09:24.6,Frame Processing Time,0.452175
+09:25.0,Decryption Time,0.045058
+09:25.0,Frame Processing Time,0.461139
+09:25.5,Decryption Time,0.041897
+09:25.5,Frame Processing Time,0.429347
+09:25.9,Decryption Time,0.041174
+09:25.9,Frame Processing Time,0.416354
+09:26.4,Decryption Time,0.04168
+09:26.4,Frame Processing Time,0.45627
+09:26.8,Decryption Time,0.042857
+09:26.8,Frame Processing Time,0.448692
+09:27.3,Decryption Time,0.04067
+09:27.3,Frame Processing Time,0.459942
+09:27.3,FPS,2.2
+09:27.7,Decryption Time,0.039938
+09:27.7,Frame Processing Time,0.403368
+09:28.1,Decryption Time,0.039956
+09:28.1,Frame Processing Time,0.447746
+09:28.6,Decryption Time,0.04012
+09:28.6,Frame Processing Time,0.419727
+09:29.0,Decryption Time,0.041448
+09:29.0,Frame Processing Time,0.4195
+09:32.6,Decryption Time,0.046024
+09:32.6,Frame Processing Time,3.564776
+09:32.6,FPS,0.94
+09:33.0,Decryption Time,0.038994
+09:33.0,Frame Processing Time,0.444261
+09:33.5,Decryption Time,0.040931
+09:33.5,Frame Processing Time,0.432188
+09:34.0,Decryption Time,0.039949
+09:34.0,Frame Processing Time,0.467628
+09:34.4,Decryption Time,0.037918
+09:34.4,Frame Processing Time,0.469685
+09:34.9,Decryption Time,0.039151
+09:34.9,Frame Processing Time,0.506685
+09:35.5,Decryption Time,0.039346
+09:35.5,Frame Processing Time,0.510508
+09:36.1,Decryption Time,0.044711
+09:36.1,Frame Processing Time,0.661836
+09:36.8,Decryption Time,0.041839
+09:36.8,Frame Processing Time,0.663041
+09:37.6,Decryption Time,0.041897
+09:37.6,Frame Processing Time,0.744881
+09:38.3,Decryption Time,0.041872
+09:38.3,Frame Processing Time,0.700057
+09:38.3,FPS,1.75
+09:39.0,Decryption Time,0.04444
+09:39.0,Frame Processing Time,0.670725
+09:39.7,Decryption Time,0.046088
+09:39.7,Frame Processing Time,0.728491
+09:40.3,Decryption Time,0.037268
+09:40.3,Frame Processing Time,0.526719
+09:40.9,Decryption Time,0.039622
+09:40.9,Frame Processing Time,0.601838
+09:41.3,Decryption Time,0.038234
+09:41.3,Frame Processing Time,0.455498
+09:41.8,Decryption Time,0.037752
+09:41.8,Frame Processing Time,0.450508
+09:42.3,Decryption Time,0.043125
+09:42.3,Frame Processing Time,0.497335
+09:42.8,Decryption Time,0.042972
+09:42.8,Frame Processing Time,0.538678
+09:43.4,Decryption Time,0.043614
+09:43.4,Frame Processing Time,0.579567
+09:43.4,FPS,1.75
+09:43.9,Decryption Time,0.039828
+09:43.9,Frame Processing Time,0.481267
+09:44.4,Decryption Time,0.03961
+09:44.4,Frame Processing Time,0.501799
+09:45.0,Decryption Time,0.039574
+09:45.0,Frame Processing Time,0.555151
+09:45.6,Decryption Time,0.038077
+09:45.6,Frame Processing Time,0.54422
+09:46.2,Decryption Time,0.04043
+09:46.2,Frame Processing Time,0.594058
+09:46.8,Decryption Time,0.04225
+09:46.8,Frame Processing Time,0.605726
+09:47.4,Decryption Time,0.043259
+09:47.4,Frame Processing Time,0.586033
+09:48.0,Decryption Time,0.040509
+09:48.0,Frame Processing Time,0.606976
+09:48.6,Decryption Time,0.045726
+09:48.6,Frame Processing Time,0.562276
+09:48.6,FPS,1.76
+09:49.2,Decryption Time,0.040195
+09:49.2,Frame Processing Time,0.605425
+09:49.8,Decryption Time,0.0424
+09:49.8,Frame Processing Time,0.619215
+09:50.4,Decryption Time,0.043373
+09:50.4,Frame Processing Time,0.582273
+09:51.1,Decryption Time,0.041091
+09:51.1,Frame Processing Time,0.650132
+09:51.7,Decryption Time,0.041052
+09:51.7,Frame Processing Time,0.685658
+09:52.5,Decryption Time,0.039245
+09:52.5,Frame Processing Time,0.77951
+09:53.2,Decryption Time,0.040154
+09:53.2,Frame Processing Time,0.699092
+09:53.8,Decryption Time,0.040134
+09:53.8,Frame Processing Time,0.50018
+09:53.8,FPS,1.54
+09:54.5,Decryption Time,0.041666
+09:54.5,Frame Processing Time,0.698014
+09:55.1,Decryption Time,0.040733
+09:55.1,Frame Processing Time,0.604376
+09:55.7,Decryption Time,0.040229
+09:55.7,Frame Processing Time,0.571228
+09:56.4,Decryption Time,0.040798
+09:56.4,Frame Processing Time,0.748433
+09:56.9,Decryption Time,0.039139
+09:56.9,Frame Processing Time,0.514818
+09:57.6,Decryption Time,0.042785
+09:57.6,Frame Processing Time,0.606534
+09:58.2,Decryption Time,0.040868
+09:58.2,Frame Processing Time,0.59517
+09:58.7,Decryption Time,0.038616
+09:58.7,Frame Processing Time,0.497077
+09:59.3,Decryption Time,0.04049
+09:59.3,Frame Processing Time,0.593936
+09:59.3,FPS,1.64
+09:59.8,Decryption Time,0.041503
+09:59.8,Frame Processing Time,0.544705
+10:00.4,Decryption Time,0.039326
+10:00.4,Frame Processing Time,0.602435
+10:00.9,Decryption Time,0.038317
+10:00.9,Frame Processing Time,0.502869
+10:01.2,Decryption Time,0.039599
+10:01.2,Frame Processing Time,0.296728
+10:01.8,Decryption Time,0.039658
+10:01.8,Frame Processing Time,0.489885
+10:02.1,Decryption Time,0.040015
+10:02.1,Frame Processing Time,0.355322
+10:02.6,Decryption Time,0.040277
+10:02.6,Frame Processing Time,0.43222
+10:03.0,Decryption Time,0.039557
+10:03.0,Frame Processing Time,0.473593
+10:03.5,Decryption Time,0.040865
+10:03.5,Frame Processing Time,0.439845
+10:04.0,Decryption Time,0.03923
+10:04.0,Frame Processing Time,0.442136
+10:04.4,Decryption Time,0.039726
+10:04.4,Frame Processing Time,0.404395
+10:04.4,FPS,2.15
+10:04.8,Decryption Time,0.040257
+10:04.8,Frame Processing Time,0.410991
+10:05.2,Decryption Time,0.041014
+10:05.2,Frame Processing Time,0.40661
+10:05.7,Decryption Time,0.040129
+10:05.7,Frame Processing Time,0.493884
+10:06.2,Decryption Time,0.04071
+10:06.2,Frame Processing Time,0.422393
+10:06.6,Decryption Time,0.040752
+10:06.6,Frame Processing Time,0.43558
+10:07.1,Decryption Time,0.040729
+10:07.1,Frame Processing Time,0.453586
+10:08.0,Decryption Time,0.045511
+10:08.0,Frame Processing Time,0.860577
+10:08.8,Decryption Time,0.043144
+10:08.8,Frame Processing Time,0.860105
+10:09.3,Decryption Time,0.048559
+10:09.3,Frame Processing Time,0.492888
+10:09.8,Decryption Time,0.042829
+10:09.8,Frame Processing Time,0.509163
+10:09.8,FPS,1.83
+10:10.2,Decryption Time,0.043897
+10:10.2,Frame Processing Time,0.306195
+10:10.5,Decryption Time,0.053078
+10:10.5,Frame Processing Time,0.384505
+10:11.0,Decryption Time,0.059717
+10:11.0,Frame Processing Time,0.463891
+10:11.9,Decryption Time,0.044857
+10:11.9,Frame Processing Time,0.853599
+10:12.7,Decryption Time,0.054781
+10:12.7,Frame Processing Time,0.793886
+10:13.0,Exception,"[WinError 10040] A message sent on a datagram socket was larger than the internal message buffer or some other network limit, or the buffer used to receive a datagram into was smaller than the datagram itself"
