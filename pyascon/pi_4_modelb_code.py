@@ -20,17 +20,17 @@ from hashlib import sha256
 # ----------------------------------------------------------------------
 # Configuration
 # ----------------------------------------------------------------------
-ROUTER_SSID = "Enter_Router_Info"
-ROUTER_PASSWORD = "Enter_Router_Info"
+ROUTER_SSID = "Enter Router Name"
+ROUTER_PASSWORD = "Enter Router Password"
 
-LAPTOP_IP = "Enter Laptop IP"   
+LAPTOP_IP = "Enter Laptop IP"   # Replace with actual laptop IP
 LAPTOP_PORT = 8888
 
-FRAME_INTERVAL = 0.001  
+FRAME_INTERVAL = 0.001  # Reduced delay
 CAP_WIDTH = 320
 CAP_HEIGHT = 240
-JPEG_QUALITY = 40  
-CHUNK_SIZE = 512  
+JPEG_QUALITY = 40  # Lowered for faster transmission
+CHUNK_SIZE = 512  # Optimized chunk size
 
 # ----------------------------------------------------------------------
 # Wi-Fi Connection on Ubuntu (nmcli)
@@ -60,46 +60,95 @@ def connect_to_router():
 # ----------------------------------------------------------------------
 # Socket Helpers
 # ----------------------------------------------------------------------
-def send_in_chunks(sock, data, chunk_size=CHUNK_SIZE):
+def send_in_chunks(sock, data, chunk_size=CHUNK_SIZE, addr=None):
     """Sends data in smaller chunks for smoother transmission."""
     for i in range(0, len(data), chunk_size):
-        sock.sendall(data[i:i + chunk_size])
+        sock.sendto(data[i:i + chunk_size], addr)
 
 # ----------------------------------------------------------------------
-# Multi-threaded Frame Capture & Sending
+# Multi-threaded Frame Capture, Display & Sending
 # ----------------------------------------------------------------------
-def capture_and_send(s, cap, shared_key):
+def capture_display_and_send(s, cap, shared_key):
+    # Variables for FPS calculation
+    frame_count_encrypted = 0
+    frame_count_unencrypted = 0
+    fps_start_time = time.time()
+
+    addr = (LAPTOP_IP, LAPTOP_PORT)  # Laptop address for sending frames
+
     while True:
         ret, frame = cap.read()
         if not ret:
             print("[WARN] Failed to grab frame.")
             break
 
-        frame_start_time = time.time()  # Start frame timing
+        # Start FPS timing for unencrypted video
+        frame_start_time = time.time()
+
+        # Display the unencrypted video stream
+        cv2.imshow("Unencrypted Live Stream", frame)
+        frame_count_unencrypted += 1
+
+        # Compress to JPEG
         success, jpeg_data = cv2.imencode(".jpg", frame, [int(cv2.IMWRITE_JPEG_QUALITY), JPEG_QUALITY])
         if not success:
             print("[WARN] JPEG encoding failed.")
             continue
 
+        # Benchmark: Start encryption and sending timer
+        encrypt_send_start_time = time.time()
+
+        # Prepare for encryption
         plaintext = jpeg_data.tobytes()
         nonce = os.urandom(16)
         ciphertext = ascon_encrypt(shared_key, nonce, b"", plaintext)
 
+        # Send encrypted video data
         frame_size = len(ciphertext)
-        s.sendall(struct.pack("!I", frame_size))
-        s.sendall(nonce)
-        send_in_chunks(s, ciphertext, chunk_size=CHUNK_SIZE)
+        s.sendto(struct.pack("!I", frame_size), addr)
+        s.sendto(nonce, addr)
+        send_in_chunks(s, ciphertext, chunk_size=CHUNK_SIZE, addr=addr)
 
-        frame_end_time = time.time()  # End frame timing
-        frame_time = frame_end_time - frame_start_time
-        print(f"[BENCHMARK] Time to encrypt and send frame: {frame_time:.6f} seconds")
+        # Benchmark: End encryption and sending timer
+        encrypt_send_end_time = time.time()
+        encrypt_send_time = encrypt_send_end_time - encrypt_send_start_time
 
-        # Log frame encryption and send time to CSV
+        # Log the time to encrypt and send
+        print(f"[BENCHMARK] Time to encrypt and send frame: {encrypt_send_time:.6f} seconds")
         with open(log_file, mode="a", newline="") as file:
             csv_writer = csv.writer(file)
-            csv_writer.writerow([datetime.now(), "Encryption & Send Time", f"{frame_time:.6f}"])
+            csv_writer.writerow([datetime.now(), "Encryption & Send Time", f"{encrypt_send_time:.6f}"])
 
-        time.sleep(FRAME_INTERVAL)  # Adjust as needed
+        # End FPS timing for encrypted frame
+        frame_end_time = time.time()
+        frame_count_encrypted += 1
+
+        # Display FPS benchmarks every 5 seconds
+        elapsed_time = frame_end_time - fps_start_time
+        if elapsed_time >= 5.0:
+            fps_unencrypted = frame_count_unencrypted / elapsed_time
+            fps_encrypted = frame_count_encrypted / elapsed_time
+
+            # Display in terminal
+            print(f"[INFO] Unencrypted Video FPS: {fps_unencrypted:.2f}")
+            print(f"[INFO] Encrypted Video FPS: {fps_encrypted:.2f}")
+
+            # Log FPS to CSV
+            with open(log_file, mode="a", newline="") as file:
+                csv_writer = csv.writer(file)
+                csv_writer.writerow([datetime.now(), "Unencrypted FPS", f"{fps_unencrypted:.2f}"])
+                csv_writer.writerow([datetime.now(), "Encrypted FPS", f"{fps_encrypted:.2f}"])
+
+            # Reset FPS counters
+            fps_start_time = frame_end_time
+            frame_count_encrypted = 0
+            frame_count_unencrypted = 0
+
+        if cv2.waitKey(1) & 0xFF == ord('q'):
+            break
+
+        # Frame interval control
+        time.sleep(FRAME_INTERVAL)
 
 # ----------------------------------------------------------------------
 # Main Pi Script
@@ -110,52 +159,33 @@ def main():
     log_file = "pi_benchmark_log.csv"
     with open(log_file, mode="w", newline="") as file:
         csv_writer = csv.writer(file)
-        csv_writer.writerow(["Timestamp", "Metric", "Time (seconds)"])  
+        csv_writer.writerow(["Timestamp", "Metric", "Value"])  # CSV header row
 
     # 1) Connect to Wi-Fi
     connect_to_router()
 
-    # 2) Connect to laptop
-    connection_start_time = time.time()  # Start connection timing
-    print("[INFO] Connecting to laptop...")
-    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    # 2) Set up UDP socket
+    print("[INFO] Setting up UDP socket...")
+    s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 
-    # Increase TCP buffer size
-    s.setsockopt(socket.SOL_SOCKET, socket.SO_RCVBUF, 1000000)
-    s.setsockopt(socket.SOL_SOCKET, socket.SO_SNDBUF, 1000000)
-
-    s.connect((LAPTOP_IP, LAPTOP_PORT))
-    connection_end_time = time.time()  # End connection timing
-    laptop_connection_time = connection_end_time - connection_start_time
-    print(f"[BENCHMARK] Time to connect to laptop: {laptop_connection_time:.6f} seconds")
-
-    # Log laptop connection time to CSV
-    with open(log_file, mode="a", newline="") as file:
-        csv_writer = csv.writer(file)
-        csv_writer.writerow([datetime.now(), "Laptop Connection Time", f"{laptop_connection_time:.6f}"])
+    # No need to connect for UDP; just set up the socket
+    print(f"[INFO] UDP socket ready to send to {LAPTOP_IP}:{LAPTOP_PORT}")
 
     # ------------------------------------------------------------------
     # 3) RSA + ECDH Key Exchange
     # ------------------------------------------------------------------
     key_exchange_start = time.time()  # Start key exchange timing
 
-    lap_rsa_len = struct.unpack("!I", s.recv(4))[0]
-    laptop_rsa_pub = s.recv(lap_rsa_len)
-
     pi_rsa_key = RSA.generate(2048)
-    pi_rsa_pubkey = pi_rsa_key.publickey().export_key(format='PEM')
-    pi_rsa_privkey = pi_rsa_key.export_key()
+    pi_rsa_pubkey = pi_rsa_key.publickey().export_key()
+    s.sendto(struct.pack("!I", len(pi_rsa_pubkey)), (LAPTOP_IP, LAPTOP_PORT))
+    s.sendto(pi_rsa_pubkey, (LAPTOP_IP, LAPTOP_PORT))
 
-    s.sendall(struct.pack("!I", len(pi_rsa_pubkey)))
-    s.sendall(pi_rsa_pubkey)
+    laptop_rsa_len_data, addr = s.recvfrom(4)
+    laptop_rsa_len = struct.unpack("!I", laptop_rsa_len_data)[0]
+    laptop_rsa_pub, addr = s.recvfrom(laptop_rsa_len)
 
-    lap_ec_len = struct.unpack("!I", s.recv(4))[0]
-    enc_lap_ec = s.recv(lap_ec_len)
-
-    cipher_rsa = PKCS1_OAEP.new(RSA.import_key(pi_rsa_privkey))
-    dec_lap_ec = cipher_rsa.decrypt(enc_lap_ec)
-
-    lap_ec_pub = ec.EllipticCurvePublicKey.from_encoded_point(ec.SECP256R1(), dec_lap_ec)
+    lap_rsa = RSA.import_key(laptop_rsa_pub)
 
     pi_ec_priv = ec.generate_private_key(ec.SECP256R1())
     pi_ec_pub_raw = pi_ec_priv.public_key().public_bytes(
@@ -163,12 +193,19 @@ def main():
         format=serialization.PublicFormat.UncompressedPoint
     )
 
-    lap_rsa = RSA.import_key(laptop_rsa_pub)
     cipher_rsa_lap = PKCS1_OAEP.new(lap_rsa)
     enc_pi_ec = cipher_rsa_lap.encrypt(pi_ec_pub_raw)
+    s.sendto(struct.pack("!I", len(enc_pi_ec)), addr)
+    s.sendto(enc_pi_ec, addr)
 
-    s.sendall(struct.pack("!I", len(enc_pi_ec)))
-    s.sendall(enc_pi_ec)
+    lap_ec_len_data, addr = s.recvfrom(4)
+    lap_ec_len = struct.unpack("!I", lap_ec_len_data)[0]
+    enc_lap_ec, addr = s.recvfrom(lap_ec_len)
+
+    cipher_rsa_pi = PKCS1_OAEP.new(pi_rsa_key)
+    dec_lap_ec = cipher_rsa_pi.decrypt(enc_lap_ec)
+
+    lap_ec_pub = ec.EllipticCurvePublicKey.from_encoded_point(ec.SECP256R1(), dec_lap_ec)
 
     shared_secret = pi_ec_priv.exchange(ECDH(), lap_ec_pub)
     shared_key = sha256(shared_secret).digest()[:16]
@@ -185,7 +222,7 @@ def main():
     print("[INFO] Shared key established for real-time streaming.")
 
     # ------------------------------------------------------------------
-    # 4) Start streaming in a separate thread
+    # 4) Start streaming, displaying, and sending video
     # ------------------------------------------------------------------
     cap = cv2.VideoCapture(0)
     if not cap.isOpened():
@@ -196,12 +233,15 @@ def main():
     cap.set(cv2.CAP_PROP_FRAME_WIDTH, CAP_WIDTH)
     cap.set(cv2.CAP_PROP_FRAME_HEIGHT, CAP_HEIGHT)
 
-    stream_thread = threading.Thread(target=capture_and_send, args=(s, cap, shared_key), daemon=True)
+    # Start the thread for capturing, displaying, and sending
+    stream_thread = threading.Thread(target=capture_display_and_send, args=(s, cap, shared_key), daemon=True)
     stream_thread.start()
     stream_thread.join()
 
+    # Release resources
     cap.release()
     s.close()
+    cv2.destroyAllWindows()
     print("[INFO] Connection closed.")
 
 if __name__ == "__main__":
