@@ -86,6 +86,9 @@ def uav_exch():
     # === Print shared key ===
     #print(f"[UAV] Shared Key: {shared_key.hex()}")
     sock.close()
+    with open("/tmp/shared_key.bin", "wb") as f:
+        f.write(shared_key)
+     
     return shared_key
 
 #uav_exch()
